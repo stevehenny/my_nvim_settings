@@ -11,4 +11,11 @@ lspconfig.pyright.setup({
   filetypes = {"python"},
 })
 
+lspconfig.clangd.setup {
+  on_attach = function(client, bufner)
+    client.server_capabilities.signatureHelpProvider = false
+    on_attach(client, bufner)
+  end,
+  capabilities = capabilities
+}
 

@@ -25,9 +25,13 @@ Neovim will now be installing a bunch of dependencies. After that is done, run t
 
 ```:MasonInstallAll```
 
+```:TSInstall c```
+
 ```:TSInstall cpp```
 
 ```:TSInstall python```
+
+```:TSInstall <any other language you use>```
 
 You should now have your own neovim configuration that supports python, c/c++! Happy neovimming!
 

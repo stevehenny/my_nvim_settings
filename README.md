@@ -4,7 +4,7 @@ Run the following commands:
 
 On Ubuntu:
 
-```sudo apt-get install node```
+```sudo apt-get install nodejs npm```
 
 On MacOS:
 

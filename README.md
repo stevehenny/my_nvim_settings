@@ -4,7 +4,7 @@ Run the following commands:
 
 On Ubuntu:
 
-```sudo apt-get install nodejs npm```
+```sudo apt-get install nodejs npm python3.11-venv```
 
 On MacOS:
 

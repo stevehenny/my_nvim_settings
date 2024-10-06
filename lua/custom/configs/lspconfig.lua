@@ -34,11 +34,4 @@ lspconfig.verible.setup {
   filetypes = { "verilog", "systemverilog" },
 root_dir = lspconfig.util.root_pattern(".git", "*.v", "*.sv"),
 }
--- lspconfig.verible.setup({
---   on_attach = function(client, bufner)
---     client.server_capabilities.signatureHelpProvider = false
---     on_attach(client, bufner)
---   end,
---   capabilities = capabilities
--- })
 

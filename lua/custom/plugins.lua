@@ -53,48 +53,48 @@ local plugins = {
    },
    {
      "jose-elias-alvarez/null-ls.nvim",
+      requires = {"nvim-lua/plenary.nvim"},
      event = "VeryLazy",
      opts = function()
       return require "custom.configs.null-ls"
      end,
    },
   {
-  "williamboman/mason.nvim",
+    "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-         "codelldb",
-         "clang-format",
-         "clangd",
-         "lua-language-server",
-         "mypy",
-         "ruff",
-         "black",
-         "pyright",
-         "debugpy",
-         "asmfmt",
-         "asm-lsp",
-         "verible",
-         "rust-analyzer",
-         "cpptools",
-         "bacon",
+        "codelldb",
+        "clang-format",
+        "clangd",
+        "lua-language-server",
+        "mypy",
+        "ruff",
+        "black",
+        "pyright",
+        "debugpy",
+        "asmfmt",
+        "asm-lsp",
+        "verible",
+        "rust-analyzer",
+        "cpptools",
+        "bacon",
       },
     },
+
   },
+
+  -- LSPConfig plugin configuration
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+      require "custom.configs.lspconfig"  -- Your custom LSP configurations
+    end,
+    init = function()
+      require("core.utils").lazy_load "nvim-lspconfig"
     end,
   },
-   {
-    "rust-lang/rust.vim",
-     ft = "rust",
-     init = function ()
-       vim.g.rustfmt_autosave = 1
-     end
-   },
-   {
+  {
      "simrat39/rust-tools.nvim",
      ft = "rust",
      dependencies = "neovim/nvim-lspconfig",

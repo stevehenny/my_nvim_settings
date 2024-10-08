@@ -32,6 +32,6 @@ lspconfig.asm_lsp.setup({
 lspconfig.verible.setup {
   cmd = { "verible-verilog-ls", "--rules_config_search" },
   filetypes = { "verilog", "systemverilog" },
-root_dir = lspconfig.util.root_pattern(".git", "*.v", "*.sv"),
+root_dir = lspconfig.util.root_pattern("*.v", "*.sv"),
 }
 

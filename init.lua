@@ -16,6 +16,8 @@ if not vim.loop.fs_stat(lazypath) then
   require("core.bootstrap").lazy(lazypath)
 end
 
+vim.api.nvim_set_keymap('n', '<leader>ld', ':m+1<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>lu', ':m-2<CR>', { noremap = true, silent = true })
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"

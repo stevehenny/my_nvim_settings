@@ -20,4 +20,7 @@ vim.api.nvim_set_keymap('n', '<leader>ld', ':m+1<CR>', { noremap = true, silent 
 vim.api.nvim_set_keymap('n', '<leader>lu', ':m-2<CR>', { noremap = true, silent = true })
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.o.guicursor = "n:block-blinkwait700-blinkoff400-blinkon250,v-c:block,i-ci:block,r:block"
 require "plugins"

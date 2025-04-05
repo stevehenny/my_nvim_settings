@@ -1,42 +1,9 @@
-This is my personal nvim settings! Feel free to copy them!
+**This repo is supposed to used as config by NvChad users!**
 
-Run the following commands:
+- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
+- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
+- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
 
-On Ubuntu:
+# Credits
 
-```sudo apt-get install nodejs npm python3.11-venv```
-
-On MacOS:
-
-```brew install node  # npm is a dependency for some NvChad Mason packages```
-
-If you need to install brew, visit https://brew.sh , and follow all instructions when installing to setup.
-
-
-## Rest of Setup:
-
-```mkdir ~/.config/nvim```
-
-```git clone  --depth 1 https://github.com/stevehenny/my_nvim_settings.git ~/.config/nvim```
-
-```nvim```
-
-Neovim will now be installing a bunch of dependencies. After that is done, run the following in Neovim:
-
-```:MasonInstallAll```
-
-```:TSInstall c```
-
-```:TSInstall cpp```
-
-```:TSInstall python```
-
-```:TSInstall <any other language you use>```
-
-You should now have your own neovim configuration that supports python, c/c++! Happy neovimming!
-
-
-
-
-
-
+1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!

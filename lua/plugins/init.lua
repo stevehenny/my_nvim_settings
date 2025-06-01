@@ -1,12 +1,15 @@
 return {
 	{
 		"stevearc/conform.nvim",
+		lazy = false,
 		event = "BufWritePre",
 		opts = require("configs.conform"),
 	},
+	{ import = "nvchad.blink.lazyspec", lazy = false },
 
 	{
 		"neovim/nvim-lspconfig",
+		lazy = false,
 		config = function()
 			require("configs.lspconfig")
 		end,
@@ -14,6 +17,7 @@ return {
 
 	{
 		"nvim-treesitter/nvim-treesitter",
+		lazy = false,
 		opts = {
 			ensure_installed = {
 				"vim",
@@ -22,6 +26,8 @@ return {
 				"html",
 				"css",
 				"python",
+				"c",
+				"cpp",
 			},
 		},
 	},
@@ -29,6 +35,7 @@ return {
 	-- Mason Plugin for Managing LSP Installations and Tools
 	{
 		"williamboman/mason.nvim",
+		lazy = false,
 		config = function()
 			require("mason").setup()
 		end,
@@ -43,15 +50,17 @@ return {
 	-- Mason LSP Config to Automatically Install LSP Servers
 	{
 		"williamboman/mason-lspconfig.nvim",
+		lazy = false,
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "clangd" }, -- Ensure clangd is installed
+				ensure_installed = { "clangd", "asm_lsp" }, -- Ensure clangd is installed
 			})
 		end,
 	},
 
 	{
 		"neovim/nvim-lspconfig",
+		lazy = false,
 		config = function()
 			require("lspconfig").clangd.setup({
 				cmd = { "clangd", "--compile-commands-dir=/path/to/your/project" },
